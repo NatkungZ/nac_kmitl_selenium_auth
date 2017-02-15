@@ -1,0 +1,6 @@
+#!/bin/bash
+#cd /home/ubuntu/Project/nac_kmitl_selenium_auth/phantomtest/
+#tmux new -s nac_auth -d "python3 headlessmain.py" 
+
+cd /home/ubuntu/Project/nac_kmitl_selenium_auth/phantomtest/
+tmux new -s nac_auth -d "/usr/bin/python3 main.py.test" 

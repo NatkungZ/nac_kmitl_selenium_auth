@@ -12,11 +12,7 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 
 
-# Write Log to /tmp/firefox_console/webdriver.log
-p = webdriver.FirefoxProfile()
-p.set_preference("webdriver.log.file", "/tmp/firefox_console")
-
-driver = webdriver.Firefox(p)
+driver = webdriver.PhantomJS(service_args=['--ignore-ssl-errors=true'])
 clear = lambda: os.system('clear')
 write_log = lambda: os.system('echo \"Loging in    : $(date)\" >> net_log')
 write_error_log = lambda: os.system('echo \"NAC not load : $(date)\" >> net_log')
@@ -27,7 +23,7 @@ def connect():
     try:
         select = Select(driver.find_element_by_id('realm_17'))
         select.select_by_value('ระบบแอคเคาท์เก่า (Generation1)')
-        driver.execute_script(open("./auto_auth.js").read())
+        driver.execute_script(open("./auto_auth.js.test").read())
         write_log()
     except:
         print ('Can\'t load page element not found')

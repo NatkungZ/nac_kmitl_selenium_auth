@@ -1,3 +1,2 @@
-tmux new-session -d 'Xvfb :11 -ac'
-export DISPLAY=:11
-python3 main.py
+DISPLAY=:99
+tmux new-session -s auth-nac -d 'python3 /home/ubuntu/Project/nac_kmitl_selenium_auth/main.py'

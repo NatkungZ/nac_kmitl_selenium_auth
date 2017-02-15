@@ -23,6 +23,7 @@ var foff='https://nac.kmitl.ac.th/dana-na/auth/url_default/welcome.cgi?p=forced-
 if( document.location.href == setURL ||document.location.href == foff || document.location.href == sesionURL ){
     document.forms[0].elements[1].value = 's6010564';
     document.forms[0].elements[2].value = 'xzrnrreb';
+    document.forms[0].elements[3].value = 'ระบบแอคเคาท์เก่า (Generation1)';
     document.forms[0].submit();
 }
 
