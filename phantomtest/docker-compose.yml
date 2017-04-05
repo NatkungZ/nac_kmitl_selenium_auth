@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  nac_nightmare:
+    build:
+      context: ./
+    command: bash -c "pip freeze && python3 -u main.py.test"
+#    volumes:
+#      - ./:/app
